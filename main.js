@@ -13,7 +13,7 @@ $(document).ready(init);
   function appendContacts(){
     var nameVal = $('#name').val();
     var emailVal = $('#input-email').val();
-    var phoneVal = $('#tel').val();
+    var phoneVal = $('#tel').val().substring(0,3) + '-' + $('#tel').val().substring(3,6) + '-' + $('#tel').val().substring(0,6);
     var imageurl = $('#image-url').val();
     var $copyTemplate = $(".template").clone();
     $('#myForm').trigger('reset');
