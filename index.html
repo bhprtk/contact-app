@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact App</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      Contacts
+    <a href="#addContact" data-toggle="modal" data-placement="top" title="Add Contact">
+          <span class="glyphicon glyphicon-plus pull-right"></span>
+    </a>
+  </div>
+  </div>
+<div class="row">
+  <div class="col-md-12 col-xs-12">
+  <ul class="list-group">
+    <li class="list-group-item template">
+      <div class="contact-info">
+        <div class="contact-image">
+          <img src="https://lh5.googleusercontent.com/-IxTvkh7yqOM/AAAAAAAAAAI/AAAAAAAAAIA/8R23MfYQp5I/photo.jpg" class="img-circle img-responsive">
+        </div>
+        <span class="contact-details">
+          <h3>Naruto Uzumaki</h3>
+          <a class="glyphicon glyphicon-phone phone" data-toggle="popover" data-placement="bottom" data-content="(555) 000 5555"></a>
+          <a class="glyphicon glyphicon-comment phone" data-toggle="popover" data-placement="bottom" data-content="uzumaki.naruto@gmail.com"></a>
+        </span>
+      </div>
+    </li>
+</ul>
+</div>
+</div>
+
+<!-- Modal -->
+<div id="addContact" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Add Contact</h4>
+      </div>
+      <div class="modal-body">
+
+        <!-- Start of modal form -->
+        <form id="myForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <label for="input-email">Email address</label>
+            <input type="email" class="form-control" id="input-email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="tel">Phone number</label>
+            <input type="text" class="form-control" id="tel" placeholder="Phone">
+          </div>
+          <div class="form-group">
+            <label for="image-url">Image URL</label>
+            <input type="text" class="form-control" id="image-url" placeholder="Image URL">
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-changes">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

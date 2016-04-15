@@ -1,0 +1,45 @@
+.panel-default{
+  background: #72bcd4;
+  height: 100px;
+}
+.panel-body{
+  font-size: 32px;
+  padding: 20px;
+  margin-left: 30px;
+  color: #395e6a;
+}
+.glyphicon{
+  margin-right: 30px;
+}
+.list-group-item{
+  height: 150px;
+  background: #e0e0e0;
+  margin: 10px;
+  position: relative;
+}
+.img-responsive {
+    display: block;
+    max-width: 120px;
+    position: absolute;
+    top: 10px;
+}
+.contact-info{
+  display: inline-block;
+}
+.contact-details{
+  position: absolute;
+  left: 200px;
+  top: 0;
+}
+.glyphicon-phone {
+  font-size: 32px;
+}
+.glyphicon-comment {
+  font-size: 32px;
+}
+.template{
+  /*display:none;*/
+}
+h3{
+  text-align: left;
+}
