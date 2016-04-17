@@ -31,7 +31,14 @@ function loadContacts(){
   $('#name').val(parentData.find('h3').text());
   $('#input-email').val(parentData.find('.glyphicon-comment').attr("data-content"));
   $('#tel').val(parentData.find('.glyphicon-phone').attr("data-content"));
-  $('#image-url').val(parentData.find('img').attr("src"));
+  var imageSrc = parentData.find('img').attr("src");
+  if(imageSrc === "http://s3-us-west-1.amazonaws.com/witty-avatars/default-avatar-2-l.jpg") {
+    $('#image-url').val("");
+  }
+  else {
+    $('#image-url').val(imageSrc);
+  }
+
 }
 
 function editContact(event){
