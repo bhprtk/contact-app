@@ -11,31 +11,31 @@
   <div class="panel panel-default">
     <div class="panel-body">
       Contacts
-    <a href="#addContact" data-toggle="modal" data-placement="top" title="Add Contact">
-          <span class="glyphicon glyphicon-plus pull-right"></span>
-    </a>
+    <a data-toggle="modal" class="glyphicon glyphicon-plus pull-right" button-type="add"></a>
   </div>
   </div>
 <div class="row">
-  <div class="col-md-12 col-xs-12">
+  <div class="col-md-1 col-xs-12"></div>
+  <div class="col-md-10 col-xs-12">
   <ul class="list-group">
-    <li class="list-group-item template">
-      <div class="contact-info">
-        <div class="contact-image">
-          <img src="https://lh5.googleusercontent.com/-IxTvkh7yqOM/AAAAAAAAAAI/AAAAAAAAAIA/8R23MfYQp5I/photo.jpg" class="img-circle img-responsive">
-        </div>
+  </ul>
+    <li class="list-group-item hvr-bob template">
+        <img src="https://lh5.googleusercontent.com/-IxTvkh7yqOM/AAAAAAAAAAI/AAAAAAAAAIA/8R23MfYQp5I/photo.jpg" class="img-circle img-responsive">
         <span class="contact-details">
           <h3>Naruto Uzumaki</h3>
           <a class="glyphicon glyphicon-phone phone" data-toggle="popover" data-placement="bottom" data-content="555-000-5555"></a>
           <a class="glyphicon glyphicon-comment phone" data-toggle="popover" data-placement="bottom" data-content="uzumaki.naruto@gmail.com"></a>
         </span>
-      </div>
+
+        <a class="glyphicon glyphicon-trash"></a>
+        <a data-toggle="modal" class="glyphicon glyphicon-pencil" button-type="edit"></a>
+
     </li>
-</ul>
 </div>
+<div class="col-md-1 col-xs-12"></div>
 </div>
 
-<!-- Modal -->
+<!-- Add Contact Modal -->
 <div id="addContact" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -49,7 +49,7 @@
         <form id="myForm">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Name">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Name">
           </div>
           <div class="form-group">
             <label for="input-email">Email address</label>
@@ -63,16 +63,22 @@
             <label for="image-url">Image URL</label>
             <input type="text" class="form-control" id="image-url" placeholder="Image URL">
           </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" id="save-changes">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <input type="submit" class="btn btn-primary" value="Save">
+          </div>
+        </form>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
 </div>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+</button>
+</div><!-- /.end of container -->
+
 <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="main.js"></script>
+<script src="main2.js"></script>
 </body>
 </html>
