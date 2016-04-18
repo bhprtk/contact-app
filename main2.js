@@ -28,17 +28,16 @@ function openModal() {
 }
 
 function loadContacts(){
-  $('#name').val(parentData.find('h3').text());
-  $('#input-email').val(parentData.find('.glyphicon-comment').attr("data-content"));
+  $('#name').val(parentData.parent().find('h3').text());
+  $('#input-email').val(parentData.find('.glyphicon-envelope').attr("data-content"));
   $('#tel').val(parentData.find('.glyphicon-phone').attr("data-content"));
-  var imageSrc = parentData.find('img').attr("src");
+  var imageSrc = parentData.parent().find('img').attr("src");
   if(imageSrc === "http://s3-us-west-1.amazonaws.com/witty-avatars/default-avatar-2-l.jpg") {
     $('#image-url').val("");
   }
   else {
     $('#image-url').val(imageSrc);
   }
-
 }
 
 function editContact(event){
@@ -46,7 +45,7 @@ function editContact(event){
 
   var nameVal = $('#name').val();
   var emailVal = $('#input-email').val();
-  var phonesVal = $('#tel').val().substring(0, 3) + '-' + $('#tel').val().substring(3, 6) + '-' + $('#tel').val().substring(6);
+  var phonesVal = $('#tel').val().substring(0, 2) + '-' + $('#tel').val().substring(3, 5) + '-' + $('#tel').val().substring(6);
   var imageurl = $('#image-url').val();
   $('#addContact').modal('hide');
 
@@ -67,7 +66,7 @@ function editContact(event){
 
 function removeContact(event) {
   var contacts = NameStorage.get();
-  var index = $(this).parents().index();
+  var index = $(this).parent().parent().index();
 
   contacts.splice(index, 1);
   NameStorage.set(contacts);
@@ -126,7 +125,7 @@ function renderContacts() {
     $copyTemplate.find('.img-circle').attr("src", contacts[i].image || "http://s3-us-west-1.amazonaws.com/witty-avatars/default-avatar-2-l.jpg");
     $copyTemplate.find('h3').text(contacts[i].name);
     $copyTemplate.find('.glyphicon-phone').attr("data-content", contacts[i].phone);
-    $copyTemplate.find('.glyphicon-comment').attr("data-content", contacts[i].email);
+    $copyTemplate.find('.glyphicon-envelope').attr("data-content", contacts[i].email);
 
     $('.list-group').append($copyTemplate);
     initPopover();

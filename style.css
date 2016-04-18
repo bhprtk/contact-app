@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   left: 10%;
+  padding-top: 10px;
   z-index: 99;
 }
 .container{
@@ -26,39 +27,49 @@
   position: relative;
 }
 .img-responsive {
-    display: block;
-    width: 120px;
-    height: 120px;
+    width: 70%;
+    height: 70%;
     position: absolute;
-    top: 10px;
+    top: 25px;
 }
 .contact-details{
+  height: 10em;
+  width: 10em;
   position: absolute;
-  left: 200px;
-  top: 0;
+}
+
+.glypho {
+  margin-left: 10em;
 }
 .glyphicon-phone {
-  font-size: 32px;
+  font-size: 2.4vw;
+  margin-top: 90px;
+  position: absolute;
+
 }
-.glyphicon-comment {
-  font-size: 32px;
-  margin-left: 100px;
+.glyphicon-envelope {
+  font-size: 2.4vw;
+  margin-left: 3em;
+  margin-top: 90px;
+  position: absolute;
 }
 .glyphicon-trash{
-  top: 50px;
-  right: 50px;
-  font-size: 32px;
+  font-size: 2.4vw;
+  margin-left: 9em;
+  margin-top: 90px;
   position: absolute;
 }
 .glyphicon-pencil{
-  top: 50px;
-  right: 150px;
-  font-size: 32px;
+  font-size: 2.4vw;
+  margin-left: 12em;
+  margin-top: 90px;
   position: absolute;
 }
 .template{
   display:none;
 }
 h3{
-  text-align: left;
+  font-size: 2.5vw;
+  margin-left: 150px;
+  position: absolute;
 }
